@@ -1,0 +1,74 @@
+baseURL: "https://www.example.com/"
+theme: "up-business-theme"
+languageCode: "zh-CN"
+
+title: " 万物有林"
+
+summaryLength: 6
+
+params:
+  title: "vanillalin"
+  description: "在宇宙中留下属于我的波动"
+  images:
+    - "images/hero-image.png"
+
+  logo: "AIrobot.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+    social:
+    dribbble: "#"
+    instagram: "#"
+    facebook: "#"
+    twitter: "#"
+
+  location:
+    - "Cosmos"
+    - "Earth"
+
+  contact:
+    - "vanilla_lin@163.com"
+    - ""
+
+  copyright: "© 2024 LinZhaomin All Rights Reserved."
+
+menus:
+  main:
+    - name: "Home"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Me"
+      url: "/about/"
+      weight: 2
+
+    - name: "My world"
+      url: "/posts"
+      weight: 3
+
+
+  buttons:
+    - name: "Book a call"
+      url: "/#"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Home"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Me"
+      url: "/#"
+      weight: 2
+
+    - name: "My world"
+      url: "/#"
+      weight: 3
+
+
+taxonomies:
+  series: "series"
+  tags: "tags"
