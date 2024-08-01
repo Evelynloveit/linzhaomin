@@ -11,8 +11,10 @@ params:
   description: "在宇宙中留下属于我的波动"
   images:
     - "images/hero-image.png"
+    - "images/lin.png"
 
   logo: "AIrobot.png"
+  DateFormat: "2024-08-01"
 
   favicons:
     themeColor: "#FFFFFF"
