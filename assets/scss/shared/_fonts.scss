@@ -1,17 +1,5 @@
 @font-face {
     font-family: 'LXGWWenKai';
-    src: url('{{ site.BaseURL }}/fonts/LXGWWenKai-Light.ttf') format('truetype');
+    src: url('../fonts/LXGWWenKai-Regular.ttf') format('truetype');
     font-weight: normal;
-}
-
-@font-face {
-    font-family: 'LXGWWenKai';
-    src: url('{{ site.BaseURL }}/fonts/LXGWWenKai-Regular.ttf') format('truetype');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'LXGWWenKai';
-    src: url('{{ site.BaseURL }}/fonts/LXGWWenKai-Bold.ttf') format('truetype');
-    font-weight: bold;
 }

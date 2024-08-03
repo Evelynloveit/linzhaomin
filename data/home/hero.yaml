@@ -2,16 +2,15 @@ enabled: true
 id: "hero"
 
 content:
-  image: "images/sunny-night.png"
   title: "Hi! Here is **Linzhaomin**'s little world."
   text: "I would like to leave something in the cosmos."
     
 
   buttonPrimary:
-    label: "How I work"
-    url: "#"
+    label: "Me & Now"
+    url: "/about/"
 
   buttonSecondary:
-    label: "Let's talk"
-    url: ""
+    label: "Find the way"
+    url: "/posts/"
 

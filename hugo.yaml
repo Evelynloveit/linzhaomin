@@ -16,6 +16,9 @@ params:
   logo: "AIrobot.png"
   DateFormat: "2024-08-01"
 
+  social:
+    dribbble: "#"
+
   favicons:
     themeColor: "#FFFFFF"
     backgroundColor: "#FFFFFF"
@@ -52,7 +55,7 @@ menus:
 
 
   buttons:
-    - name: "Book a call"
+    - name: "Connect"
       url: "/#"
       weight: 5
       pre: "btn btn-primary text-light"
