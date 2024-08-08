@@ -27,7 +27,7 @@
 :root {
     --main-bg-color: #b09adb;
     --main-color: #e5d8c6;
-    --main-font: #8c6B5d;
+    --main-font: #694d41;
     --main-link: #c7aaa6;
     --main-color-opacity: rgba(229, 216, 198, .2);
     --main-bg-color-op: rgba(147, 160, 125, .5);
@@ -141,7 +141,7 @@ p {
 }
 
 hr {
-    margin: 20px 0;
+    margin: 10px 0 15px;
     border: 0;
     border-top: 1px solid #ccc;
 }
@@ -646,6 +646,10 @@ header .go-back i {
     color: #eee;
 }
 
+.description {
+    height: 100px;
+}
+
 .bg-cover .post-title {
     margin: 0 auto;
     font-size: 2.5rem;
@@ -953,9 +957,7 @@ article .card-image {
     border-radius: 8px;
 }
 
-article .card-image img {
-    height: 220px;
-    border-radius: 0.3rem;
+.card-image img {
     opacity: .7;
 }
 
@@ -963,19 +965,40 @@ article .tag-image img {
     height: 220px;
 }
 
-article .card .card-content {
+.card .card-content {
     padding: 15px 15px 12px 18px;
 }
 
-article .article-content .summary {
+.summary {
     padding-bottom: 2px;
     padding-left: 0;
     margin-bottom: 6px;
     word-break: break-all;
 }
 
-article .article-content .publish-author {
+.article-content {
+    padding: 2px 8px 0px;
+}
+
+.article-content .publish-author {
     float: right;
+}
+
+.article-title {
+    display: block;
+    line-height: 32px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 15px
+}
+
+.responsive-img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
 }
 
 .publish-date .icon-date {
@@ -987,22 +1010,23 @@ article .article-content .publish-author {
 }
 
 .article-content .publish-author .post-category {
-    padding-left: 5px;
+    padding-right: 5px;
 }
 
-article .card .card-action {
-    padding: 10px 15px 10px 18px;
+.card .card-action {
+    padding: 5px;
     border-radius: 0 0 8px 8px !important;
 }
 
-article .article-tags .chip {
-    margin: 2px;
+
+.article-tags .chip {
     font-size: 0.8rem;
     font-weight: 400;
     height: 22px;
     line-height: 22px;
     color: #fff;
     border-radius: 10px;
+    padding: 2px 4px;
 }
 
 .prev-next {
@@ -1536,6 +1560,8 @@ thead {
         left: 50%;
         margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
+        transform: translateZ(0);
+        backface-visibility: hidden;
         -webkit-transform: translateZ(0);
         -webkit-backface-visibility: hidden;
     }
@@ -1970,8 +1996,25 @@ footer .copy-right {
     z-index: 998;
 }
 
+.btn-floating {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    line-height: 40px;
+    padding: 0;
+    background-color: #7C76BB;
+    border-radius: 50%;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, #7C76BB 0%, #7C76BB 100%);
     width: 48px;
     height: 48px;
 }
@@ -2062,37 +2105,8 @@ footer .copy-right {
     padding-right: 1em;
 }
 
-/* create the ... style */
-.block-with-text:before {
-    /* points in the end */
-    content: '...';
-    /* absolute position */
-    position: absolute;
-    /* set position to right bottom corner of block */
-    right: 0.2em;
-    bottom: 0;
-}
-
-/* hide ... if we have text, which is less than or equal to max lines */
-.block-with-text:after {
-    /* points in the end */
-    content: '';
-    /* absolute position */
-    position: absolute;
-    /* set position to right bottom corner of text */
-    right: 0;
-    /* set width and height */
-    width: 1em;
-    height: 1em;
-    /* fix the problem of hidden failure */
-    margin-top: 0.4em;
-    /* bg color = bg color under block */
-    background: white;
-}
 
 /*二级菜单*/
-
-.nav-menu {}
 
 .nav-menu li .sub-nav {
     position: absolute;
@@ -2214,10 +2228,6 @@ footer .copy-right {
     background-color: var(--main-bg-color) !important;
 }
 
-.fa,
-.fas {
-    /* font-family: unset !important; */
-}
 
 #articleContent a[title*="bookmark"] {
     text-align: center;
@@ -2235,4 +2245,12 @@ footer .copy-right {
 
 #toc-content .toc-link:hover {
     color: var(--main-link);
+}
+
+.content-padding {
+    padding: 24px;
+}
+
+.tooltipped {
+    color: var(--main-bg-color);
 }

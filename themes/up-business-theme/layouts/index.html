@@ -1,8 +1,15 @@
 {{ define "main" }}
-  {{ with .Site.Data.home.hero }}{{ partial "sections/hero.html" . }}{{ end }}
-  {{ with .Site.Data.home.brands }}{{ partial "sections/brands.html" . }}{{ end }}
-  {{ with .Site.Data.home.portfolio }}{{ partial "sections/portfolio.html" . }}{{ end }}
-  {{ with .Site.Data.home.services }}{{ partial "sections/services.html" . }}{{ end }}
-  {{ with .Site.Data.home.testimonials }}{{ partial "sections/testimonials.html" . }}{{ end }}
-  {{ with .Site.Data.home.cta }}{{ partial "sections/cta.html" . }}{{ end }}
+{{ with .Site.Data.home.hero }}{{ partial "sections/hero.html" . }}{{ end }}
+{{ with .Site.Data.home.brands }}{{ partial "sections/brands.html" . }}{{ end }}
+{{ with .Site.Data.home.portfolio }}{{ partial "sections/portfolio.html" . }}{{ end }}
+{{ with .Site.Data.home.services }}{{ partial "sections/mainArticle.html" . }}{{ end }}
+{{ with .Site.Data.home.memo }}{{ partial "sections/memo.html" . }}{{ end }}
+{{ with .Site.Data.home.cta }}{{ partial "sections/cta.html" . }}{{ end }}
+
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
 {{ end }}

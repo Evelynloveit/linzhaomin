@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta name="description"
         content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
-    
+
 
     <!-- Favicons and Manifest 这句话用来设置网页在标签上的logo -->
     {{ partial "head/_favicons.html" . }}
@@ -17,17 +17,18 @@
 
     <!-- Stylesheets and Javascript -->
     {{ partial "head/_resources.html" . }}
-
+    <script src="/libs/jquery/jquery.min.js"></script>
     <!-- RSS -->
     {{ range .AlternativeOutputFormats -}}
     {{ printf `
     <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
-    <!-- 文章信息样式 -->
+    <!-- 样式 -->
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css"> -->
     <!-- 全局字体 -->
-    <link rel="stylesheet" href="//cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css"
-        media="print" onload="this.media='all'">
+    <!-- <link rel="stylesheet" href="//cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css"
+        media="print" onload="this.media='all'"> -->
     <!-- 自定义样式 -->
     <link rel="stylesheet" type="text/css" href="/css/vanillalin.css">
 </head>

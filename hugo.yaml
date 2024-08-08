@@ -1,4 +1,4 @@
-baseURL: "https://www.example.com/"
+baseURL: "https://www.linzhaomin.pages.dev/"
 theme: "up-business-theme"
 languageCode: "zh-CN"
 
@@ -11,7 +11,6 @@ params:
   description: "在宇宙中留下属于我的波动"
   images:
     - "images/hero-image.png"
-    - "images/lin.png"
 
   logo: "AIrobot.png"
   DateFormat: "2024-08-01"
@@ -23,18 +22,13 @@ params:
     themeColor: "#FFFFFF"
     backgroundColor: "#FFFFFF"
     faviconColor: "#000000"
-    social:
-    dribbble: "#"
-    instagram: "#"
-    facebook: "#"
-    twitter: "#"
 
   location:
     - "Cosmos"
     - "Earth"
 
   contact:
-    - "vanilla_lin@163.com"
+    - "example@163.com"
     - ""
 
   copyright: "© 2024 LinZhaomin All Rights Reserved."
@@ -42,7 +36,7 @@ params:
 menus:
   main:
     - name: "Home"
-      url: "/#hero"
+      url: "/#home"
       weight: 1
 
     - name: "Me"
@@ -62,15 +56,15 @@ menus:
 
   footer:
     - name: "Home"
-      url: "/#hero"
+      url: "/#home"
       weight: 1
 
     - name: "Me"
-      url: "/#"
+      url: "/about"
       weight: 2
 
     - name: "My world"
-      url: "/#"
+      url: "/posts/"
       weight: 3
 
 

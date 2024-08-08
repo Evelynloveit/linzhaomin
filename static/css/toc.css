@@ -23,6 +23,7 @@
 .toc-widget {
     width: 345px;
     padding-left: 20px;
+    display: none;
 }
 
 .toc-widget .toc-title {
@@ -35,6 +36,7 @@
 .toc-widget ol {
     padding: 0;
     list-style: none;
+
 }
 
 #toc-content {
