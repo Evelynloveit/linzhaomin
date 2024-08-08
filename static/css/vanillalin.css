@@ -2252,5 +2252,6 @@ footer .copy-right {
 }
 
 .tooltipped {
-    color: var(--main-bg-color);
+    margin: 0 8px 5px 0;
+    color: rgb(147, 127, 200);
 }

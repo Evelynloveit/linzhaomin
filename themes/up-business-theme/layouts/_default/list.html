@@ -21,11 +21,11 @@
                             <!-- <img src="/img/services-web-development.png" class="responsive-img" alt="{{ .Title }}"> -->
                             {{ if .Params.feature }}
                             {{ if .Params.UseRelativeCover }}
-                            <img loading='lazy' decoding="async" src="{{ (printf " %s%s" .Permalink .Params.feature )
-                                }}" class="responsive-img" alt="picture"/>
+                            <img loading='lazy' decoding="async" src="{{ .Permalink .Params.feature }}"
+                                class="responsive-img" alt="picture" />
                             {{ else }}
                             <img loading='lazy' decoding="async" src="{{ .Params.feature | absURL }}"
-                                class="responsive-img" alt="picture"/>
+                                class="responsive-img" alt="picture" />
                             {{ end }}
                             {{ end }}
                             <span class="fw-semibold article-title">{{ .Title }}</span>
@@ -65,4 +65,10 @@
         </div>
     </div>
 </section>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
 {{ end }}
