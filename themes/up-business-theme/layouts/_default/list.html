@@ -12,13 +12,14 @@
                 {{ end }}
             </div>
         </div>
+
+        <!-- 卡片 -->
         <div class="row g-4 pb-5">
-            {{ range (.Paginate .RegularPages).Pages }}
+            {{ range (.Paginate .RegularPages).Pages.ByDate }}
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card">
                     <a href="{{ .Permalink }}" class="text-decoration-none h-100">
                         <div class="card-image aspect-ratio-62-5">
-                            <!-- <img src="/img/services-web-development.png" class="responsive-img" alt="{{ .Title }}"> -->
                             {{ if .Params.feature }}
                             {{ if .Params.UseRelativeCover }}
                             <img loading='lazy' decoding="async" src="{{ .Permalink .Params.feature }}"
@@ -40,9 +41,6 @@
                                 <i class="far fa-clock fa-fw icon-date"></i> {{ .Date.Format
                                 ($.Site.Params.DateFormatList | default "2006-01-02") }}
                             </span>
-                            <span class="publish-author">
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            </span>
                         </div>
                     </div>
                     <hr />
@@ -60,9 +58,7 @@
             </div>
             {{ end }}
         </div>
-        <div class="row pb-5">
-            {{ template "_internal/pagination.html" . }}
-        </div>
+
     </div>
 </section>
 <!-- 回到顶部按钮 -->

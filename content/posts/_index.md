@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "My World"
 author : "linzhaomin"
-description: "Blog list description"
+description: "Something found, and something created."
 ---

@@ -1,0 +1,193 @@
+{{ if or .Next .Prev }}
+<div id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        {{ if .PrevInSection }}
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇
+            </div>
+            <div class="card">
+                <a href="{{ .PrevInSection.Permalink }}" class="text-decoration-none h-100">
+                    <div class="card-image aspect-ratio-62-5">
+                        {{ if .PrevInSection.Params.feature }}
+                        {{ if .PrevInSection.Params.UseRelativeCover }}
+                        <img loading='lazy' decoding="async" src="{{ .PrevInSection.Permalink .Params.feature }}"
+                            class="responsive-img" alt="picture" />
+                        {{ else }}
+                        <img loading='lazy' decoding="async" src="{{ .PrevInSection.Params.feature | absURL }}"
+                            class="responsive-img" alt="picture" />
+                        {{ end }}
+                        {{ end }}
+                        <span class="fw-semibold article-title">{{ .PrevInSection.Title }}</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        {{ .PrevInSection.Summary | plainify }}
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>{{ .PrevInSection.Date.Format
+                            ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                        </span>
+                        <span class="publish-author">
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        </span>
+                    </div>
+                </div>
+                {{if .Params.tags}}
+                <div class="card-action article-tags">
+                    {{range .PrevInSection.Params.tags}}
+                    <a href="/tags/">
+                        <span class="chip bg-color">#{{ . }}</span>
+                    </a>
+                    {{end}}
+                </div>
+                {{end}}
+            </div>
+        </div>
+        {{ else }}
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-dot-circle"></i>&nbsp;本篇(最新)
+            </div>
+            <div class="card">
+                <a href="{{ .Permalink }}" class="text-decoration-none h-100">
+                    <div class="card-image aspect-ratio-62-5">
+                        {{ if .Params.feature }}
+                        {{ if .Params.UseRelativeCover }}
+                        <img loading='lazy' decoding="async" src="{{ .Permalink .Params.feature }}"
+                            class="responsive-img" alt="picture" />
+                        {{ else }}
+                        <img loading='lazy' decoding="async" src="{{ .Params.feature | absURL }}" class="responsive-img"
+                            alt="picture" />
+                        {{ end }}
+                        {{ end }}
+                        <span class="fw-semibold article-title">{{ .Title }}</span>
+                    </div>
+                </a>
+                <div class="article-content">
+                    <div class="summary block-with-text text-black-61">
+                        {{ .Summary | plainify }}
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i> {{ .Date.Format
+                            ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                        </span>
+                        <!-- <span class="publish-author">
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        </span> -->
+                    </div>
+                </div>
+                <hr />
+                {{if .Params.tags}}
+                <div class="card-action article-tags">
+                    {{range .Params.tags}}
+                    <a href="/tags/">
+                        <span class="chip bg-color">#{{ . }}</span>
+                    </a>
+                    {{end}}
+                </div>
+                {{end}}
+
+            </div>
+        </div>
+        {{ end }}
+
+        {{ if .NextInSection }}
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="{{ .NextInSection.Permalink }}" class="text-decoration-none h-100">
+                    <div class="card-image aspect-ratio-62-5">
+                        {{ if .NextInSection.Params.feature }}
+                        {{ if .NextInSection.Params.UseRelativeCover }}
+                        <img loading='lazy' decoding="async" src="{{ .NextInSection.Permalink .Params.feature }}"
+                            class="responsive-img" alt="picture" />
+                        {{ else }}
+                        <img loading='lazy' decoding="async" src="{{ .NextInSection.Params.feature | absURL }}"
+                            class="responsive-img" alt="picture" />
+                        {{ end }}
+                        {{ end }}
+                        <span class="fw-semibold article-title">{{ .NextInSection.Title }}</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        {{ .NextInSection.Summary | plainify }}
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>{{ .NextInSection.Date.Format
+                            ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                        </span>
+                        <span class="publish-author">
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        </span>
+                    </div>
+                </div>
+                {{if .NextInSection.Params.tags}}
+                <div class="card-action article-tags">
+                    {{range .NextInSection.Params.tags}}
+                    <a href="/tags/">
+                        <span class="chip bg-color">#{{ . }}</span>
+                    </a>
+                    {{end}}
+                </div>
+                {{end}}
+            </div>
+        </div>
+        {{ else }}
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                本篇(最早)&nbsp;<i class="fas fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="{{ .Permalink }}" class="text-decoration-none h-100">
+                    <div class="card-image aspect-ratio-62-5">
+                        {{ if .Params.feature }}
+                        {{ if .Params.UseRelativeCover }}
+                        <img loading='lazy' decoding="async" src="{{ .Permalink .Params.feature }}"
+                            class="responsive-img" alt="picture" />
+                        {{ else }}
+                        <img loading='lazy' decoding="async" src="{{ .Params.feature | absURL }}" class="responsive-img"
+                            alt="picture" />
+                        {{ end }}
+                        {{ end }}
+                        <span class="fw-semibold article-title">{{ .Title }}</span>
+                    </div>
+                </a>
+                <div class="article-content">
+                    <div class="summary block-with-text text-black-61">
+                        {{ .Summary | plainify }}
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i> {{ .Date.Format
+                            ($.Site.Params.DateFormatList | default "2006-01-02") }}
+                        </span>
+                        <span class="publish-author">
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        </span>
+                    </div>
+                </div>
+                <hr />
+                {{if .Params.tags}}
+                <div class="card-action article-tags">
+                    {{range .Params.tags}}
+                    <a href="/tags/">
+                        <span class="chip bg-color">#{{ . }}</span>
+                    </a>
+                    {{end}}
+                </div>
+                {{end}}
+
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

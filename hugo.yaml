@@ -1,19 +1,18 @@
-baseURL: "https://linzhaomin.pages.dev/"
-theme: "up-business-theme"
-languageCode: "zh-CN"
-
-title: " 万物有林"
-
-summaryLength: 6
+baseURL: https://linzhaomin.pages.dev/
+theme: up-business-theme
+languageCode: zh-CN
+timeZone: 'Asia/Shanghai'
+hasCJKLanguage: true
+title: 万物有林
 
 params:
-  title: "vanillalin"
-  description: "在宇宙中留下属于我的波动"
+  title: vanillalin
+  description: 在宇宙中留下属于我的波动
   images:
-    - "images/hero-image.png"
+    - images/hero-image.png
 
-  logo: "AIrobot.png"
-  DateFormat: "2024-08-01"
+  logo: AIrobot.png
+  DateFormat: 2024-08-01
 
   social:
     dribbble: "#"
@@ -28,18 +27,18 @@ params:
     - "Earth"
 
   contact:
-    - "vanilla_lin@163.com"
-    - ""
+    - vanilla_lin@163.com
+    - 
 
-  copyright: "© 2024 LinZhaomin All Rights Reserved."
+  copyright: © 2024 LinZhaomin All Rights Reserved.
 
 menus:
   main:
-    - name: "Home"
-      url: "/#home"
+    - name: "Projects"
+      url: "/projects"
       weight: 1
 
-    - name: "Me"
+    - name: "About"
       url: "/about/"
       weight: 2
 
@@ -59,7 +58,7 @@ menus:
       url: "/#home"
       weight: 1
 
-    - name: "Me"
+    - name: "About"
       url: "/about"
       weight: 2
 

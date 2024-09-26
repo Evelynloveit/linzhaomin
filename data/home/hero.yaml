@@ -3,7 +3,7 @@ id: "home"
 
 content:
   title: "Hi! Here is **Linzhaomin**'s little world."
-  text: "I would like to leave something in the cosmos."
+  text: "Life is not about finding yourself but creating yourself."
     
 
   buttonPrimary:
@@ -11,6 +11,6 @@ content:
     url: "/about/"
 
   buttonSecondary:
-    label: "Find the way"
+    label: "To my world"
     url: "/posts/"
 
